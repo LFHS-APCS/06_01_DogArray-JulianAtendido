@@ -6,7 +6,16 @@ public class DogArray
      */
     public static int getYoungestIndex(Dog[] dogs)
     {
-        return -1;
+      int age = dogs[0].getAge();
+      int youngest = 0;
+        for (int i = 0; i < dogs.length; i++){
+          if (dogs[i].getAge() < age) {
+          age = dogs[i].getAge();
+          youngest = i;
+          }
+        }
+      return youngest;
+
     }
 
     /**
