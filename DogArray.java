@@ -23,6 +23,14 @@ public class DogArray
      */
     public static String getYoungestName(Dog[] dogs)
     {
-        return "";
+      int age = dogs[0].getAge();
+      String youngest = dogs[0].getName();
+      for (int i = 0; i < dogs.length; i++){
+        if (dogs[i].getAge() < age){
+          age = dogs[i].getAge();
+          youngest = dogs[i].getName();
+        }
+      }
+        return youngest;
     }
 }
